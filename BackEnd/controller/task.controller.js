@@ -74,3 +74,23 @@ export const deleteTask = async (req, res) => {
       .json({ message: "Server error", error: error.message });
   }
 };
+
+export const toggleTaskStatus = async (req, res) => {
+  try {
+    const task = await taskModel.findOne({
+      _id: req.params.id,
+      user: req.user._id,
+    });
+    if (!task) return res.status(404).json({ message: "Task not found" });
+
+    // Flip status
+    task.status = task.status === "pending" ? "completed" : "pending";
+    await task.save();
+
+    res.status(200).json(task);
+  } catch (error) {
+    res
+      .status(500)
+      .json({ message: "Error toggling task", error: error.message });
+  }
+};
