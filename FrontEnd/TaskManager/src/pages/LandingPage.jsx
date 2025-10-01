@@ -8,7 +8,7 @@ function LandingPage() {
       <Navbar />
 
       <main className="flex flex-col items-center justify-center text-center px-6 py-20">
-        <h1 className="text-5xl font-extrabold mb-6  overflow-hidden border-r-4 border-gray-800 whitespace-nowrap typewriter bg-gradient-to-r from-blue-900 via-purple-500 to-blue-500 text-transparent bg-clip-text ">
+        <h1 className="text-5xl font-extrabold mb-6  overflow-hidden border-r-4 border-gray-800 whitespace-nowrap typewriter bg-gradient-to-r from-blue-900 via-purple-500 to-blue-900 text-transparent bg-clip-text ">
           Manage Your Tasks Efficiently
         </h1>
         <p className="text-lg text-gray-600 mb-10 max-w-xl">

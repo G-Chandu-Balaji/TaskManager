@@ -124,7 +124,7 @@ function Dashboard() {
   // Logout
   const handleLogout = () => {
     localStorage.removeItem("token");
-    navigate("/login");
+    navigate("/");
   };
 
   // Search & Filter

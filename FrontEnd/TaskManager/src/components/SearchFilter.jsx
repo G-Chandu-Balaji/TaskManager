@@ -2,16 +2,16 @@ import React from "react";
 
 function SearchFilter({ search, setSearch, filter, setFilter }) {
   return (
-    <div className="flex gap-4 mb-4">
+    <div className="flex flex-col md:flex-row gap-4 mb-6">
       <input
         type="text"
         placeholder="Search tasks..."
-        className="flex-1 px-4 py-2 border rounded-lg"
+        className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 transition duration-200"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
       <select
-        className="px-4 py-2 border rounded-lg"
+        className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 transition duration-200"
         value={filter}
         onChange={(e) => setFilter(e.target.value)}
       >
