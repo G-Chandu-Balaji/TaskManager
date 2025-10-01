@@ -50,6 +50,15 @@ function Dashboard() {
   // Add / Update Task
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!title.trim()) {
+      alert("Title is required");
+      return;
+    }
+    if (!description.trim()) {
+      alert("Description is required");
+      return;
+    }
+
     try {
       const url = editingTask
         ? `http://localhost:5000/api/tasks/${editingTask._id}`

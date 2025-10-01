@@ -19,6 +19,9 @@ export const createTask = async (req, res) => {
     if (!title) {
       return res.status(400).json({ message: "Title is required" });
     }
+    if (!description) {
+      return res.status(400).json({ message: "Discription is required" });
+    }
 
     const task = await taskModel.create({
       user: req.user._id,
